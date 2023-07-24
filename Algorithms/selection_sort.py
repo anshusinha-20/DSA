@@ -11,11 +11,11 @@ def find_smallest_index(arr):
     return smallest_index
 
 def selection_sort(arr):
-    sorted_arr = []
+    new_arr = []
     for i in range(len(arr)):
         smallest_index = find_smallest_index(arr)
-        sorted_arr.append(arr.pop(smallest_index))
-    return sorted_arr
+        new_arr.append(arr.pop(smallest_index))
+    return new_arr
 
 # ----- MAIN ----- #
 if __name__ == '__main__':
