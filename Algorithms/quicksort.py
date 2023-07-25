@@ -12,6 +12,16 @@ def rec_sum(arr):
         return 0
     else:
         return arr[0] + rec_sum(arr[1:])
+    
+# Exercises
+# 4.2 Write a recursive function to count the number of items in a list.
+def count_items(arr):
+    if not arr:
+        return 0
+    else:
+        return 1 + count_items(arr[1:])
+
+
 
 
 # ----- MAIN ----- #
@@ -24,3 +34,6 @@ if __name__ == '__main__':
 
     # # rec_sum()
     # print(rec_sum([1, 2, 3, 4, 5]))
+
+    # count_items()
+    print(count_items([1, 2, 3, 4, 5]))
