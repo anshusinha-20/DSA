@@ -73,6 +73,13 @@ def double_print(arr):
         return double_print(arr[1:])
 
 # 4.7 Doubling the value of just the first element in an array.
+def first_only_double(arr):
+    if not arr:
+        return 
+    else:
+        arr[0] *= 3
+        return arr
+    
 # 4.8 Creating a multiplication table with all the elements in the array. So if your array is 
 #     [2, 3, 7, 8, 10], you first multiply every element by 2, then multiply every element by 3, 
 #     then by 7, and so on.
@@ -102,5 +109,8 @@ if __name__ == '__main__':
     # # normal_print()
     # print(normal_print([1, 2, 3, 4, 5]))
 
-    # double_print()
-    print(double_print([1, 2, 3, 4, 5]))
+    # # double_print()
+    # print(double_print([1, 2, 3, 4, 5]))
+
+    # first_only_double()
+    print(first_only_double([2, 2, 3, 4, 5]))
