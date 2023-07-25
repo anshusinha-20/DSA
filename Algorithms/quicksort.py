@@ -53,6 +53,22 @@ def quicksort(arr):
         lesser = [i for i in  arr[1:] if i < pivot]
         greater = [i for i in arr[1:] if i > pivot]
         return quicksort(lesser) + [pivot] + quicksort(greater)
+    
+# EXERCISES
+# How long would each of these operations take in Big O notation?
+# 4.5 Printing the value of each element in an array.
+def normal_print(arr):
+    if not arr:
+        return
+    else:
+        print(arr[0])
+        return normal_print(arr[1:])
+    
+# 4.6 Doubling the value of each element in an array.
+# 4.7 Doubling the value of just the first element in an array.
+# 4.8 Creating a multiplication table with all the elements in the array. So if your array is 
+#     [2, 3, 7, 8, 10], you first multiply every element by 2, then multiply every element by 3, 
+#     then by 7, and so on.
 
 
 # ----- MAIN ----- #
@@ -73,5 +89,8 @@ if __name__ == '__main__':
     # arr = [1, 2, 3, 4, 5]
     # print(binary_search_rec(arr, item = 3, low = 0, high = len(arr) - 1))
 
-    # quicksort()
-    print(quicksort([6, 1, 5, 3, 0]))
+    # # quicksort()
+    # print(quicksort([6, 1, 5, 3, 0]))
+
+    # normal_print()
+    print(normal_print([1, 2, 3, 4, 5]))
