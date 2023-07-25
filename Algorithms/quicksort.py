@@ -42,6 +42,18 @@ def binary_search_rec(arr, item, low, high):
     else:
         return binary_search_rec(arr, item, low, mid - 1)
 
+'''
+Quicksort algorithm
+'''
+def quicksort(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        pivot = arr[0]
+        lesser = [i for i in  arr[1:] if i < pivot]
+        greater = [i for i in arr[1:] if i > pivot]
+        return quicksort(lesser) + [pivot] + quicksort(greater)
+
 
 # ----- MAIN ----- #
 if __name__ == '__main__':
@@ -60,3 +72,6 @@ if __name__ == '__main__':
     # # binary_search_rec()
     # arr = [1, 2, 3, 4, 5]
     # print(binary_search_rec(arr, item = 3, low = 0, high = len(arr) - 1))
+
+    # quicksort()
+    print(quicksort([6, 1, 5, 3, 0]))
