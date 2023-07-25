@@ -83,7 +83,15 @@ def first_only_double(arr):
 # 4.8 Creating a multiplication table with all the elements in the array. So if your array is 
 #     [2, 3, 7, 8, 10], you first multiply every element by 2, then multiply every element by 3, 
 #     then by 7, and so on.
-
+def multiplication_table(arr):
+    if not arr:
+        return
+    else:
+        for i in arr:
+            print(f'Multiplication by {i}')
+            for j in arr:
+                print(f'{j} * {i} = {j * i}')
+            print()
 
 # ----- MAIN ----- #
 if __name__ == '__main__':
@@ -112,5 +120,8 @@ if __name__ == '__main__':
     # # double_print()
     # print(double_print([1, 2, 3, 4, 5]))
 
-    # first_only_double()
-    print(first_only_double([2, 2, 3, 4, 5]))
+    # # first_only_double()
+    # print(first_only_double([2, 2, 3, 4, 5]))
+
+    # # multiplication_table()
+    # multiplication_table([2, 3, 7, 8, 10])
