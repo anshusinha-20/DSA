@@ -10,4 +10,7 @@ if __name__ == '__main__':
 
     """ Uncomment to run specific block of code below 👇🏻"""
 
-    print(arr_sum([1, 2, 3, 4, 5]))
+    # # arr_sum()
+    # print(arr_sum([1, 2, 3, 4, 5]))
+
+    
