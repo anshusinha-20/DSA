@@ -71,15 +71,15 @@
 
 # ----- #
 
-# CODE BEFORE AND AFTER THE RECURSIVE CALL
-def count_down_and_up(num, call_stack):
-    print(num)
-    if num == 0:
-        print('reached the base case')
-        return None
-    else:
-        count_down_and_up(num - 1, call_stack + 1)
-        print(f'call stack: {call_stack}: {num}')
-        return None
-
-count_down_and_up(3, 1)
+# # CODE BEFORE AND AFTER THE RECURSIVE CALL
+# def count_down_and_up(num, call_stack):
+#     print(num)
+#     if num == 0:
+#         print('reached the base case')
+#         return None
+#     else:
+#         count_down_and_up(num - 1, call_stack + 1)
+#         print(f'call stack: {call_stack}: {num}')
+#         return None
+#
+# count_down_and_up(3, 1)
