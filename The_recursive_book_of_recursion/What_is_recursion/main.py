@@ -17,11 +17,34 @@
 
 # ----- #
 
-# STACK
-num_stack = []
-num_stack.append('5')
-print(','.join(num_stack))
-num_stack.append('3')
-print(','.join(num_stack))
-num_stack.append('4')
-print(','.join(num_stack))
+# # STACK
+# num_stack = []
+# num_stack.append('5')
+# print(','.join(num_stack))
+# num_stack.append('3')
+# print(','.join(num_stack))
+# num_stack.append('4')
+# print(','.join(num_stack))
+# num_stack.pop()
+# print(','.join(num_stack))
+
+# ----- #
+
+# CALL STACK
+def a():
+    name = 'alex'
+    print(name)
+    b()
+    print(name)
+
+def b():
+    name = 'chris'
+    print(name)
+    c()
+    print(name)
+
+def c():
+    name = 'john'
+    print(name)
+
+a()
