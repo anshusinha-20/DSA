@@ -30,21 +30,28 @@
 
 # ----- #
 
-# CALL STACK
-def a():
-    name = 'alex'
-    print(name)
-    b()
-    print(name)
+# # CALL STACK
+# def a():
+#     name = 'alex'
+#     print(name)
+#     b()
+#     print(name)
+#
+# def b():
+#     name = 'chris'
+#     print(name)
+#     c()
+#     print(name)
+#
+# def c():
+#     name = 'john'
+#     print(name)
+#
+# a()
 
-def b():
-    name = 'chris'
-    print(name)
-    c()
-    print(name)
+# ----- #
 
-def c():
-    name = 'john'
-    print(name)
-
-a()
+# STACK OVERFLOW
+def endless():
+    endless()
+endless()
