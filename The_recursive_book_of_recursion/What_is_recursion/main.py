@@ -51,7 +51,20 @@
 
 # ----- #
 
-# STACK OVERFLOW
-def endless():
-    endless()
-endless()
+# # STACK OVERFLOW
+# def endless():
+#     endless()
+# endless()
+
+# ----- #
+
+# BASE CASE AND RECURSIVE CASE
+def factorial(n):
+    if n == 0:
+        print('base case arrived')
+        return 1
+    else:
+        print('recursive case running')
+        return n * factorial(n - 1)
+
+print(factorial(3))
