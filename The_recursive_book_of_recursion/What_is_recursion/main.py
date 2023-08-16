@@ -58,13 +58,28 @@
 
 # ----- #
 
-# BASE CASE AND RECURSIVE CASE
-def factorial(n):
-    if n == 0:
-        print('base case arrived')
-        return 1
-    else:
-        print('recursive case running')
-        return n * factorial(n - 1)
+# # BASE CASE AND RECURSIVE CASE
+# def factorial(n):
+#     if n == 0:
+#         print('base case arrived')
+#         return None
+#     else:
+#         print('recursive case running')
+#         return n * factorial(n - 1)
+#
+# print(factorial(3))
 
-print(factorial(3))
+# ----- #
+
+# CODE BEFORE AND AFTER THE RECURSIVE CALL
+def count_down_and_up(num, call_stack):
+    print(num)
+    if num == 0:
+        print('reached the base case')
+        return None
+    else:
+        count_down_and_up(num - 1, call_stack + 1)
+        print(f'call stack: {call_stack}: {num}')
+        return None
+
+count_down_and_up(3, 1)
