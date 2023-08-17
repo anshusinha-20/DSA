@@ -89,12 +89,15 @@
 #     elif pow == 1:
 #         return num
 #     elif pow % 2 == 0:  # even power
-#         result = exponent_by_iteration(num, pow // 2)
+#         result = exponent_by_recursion(num, pow // 2)
 #         return result * result
 #     elif pow % 2 != 0:  # odd power
-#         result = exponent_by_iteration(num, pow // 2)
+#         result = exponent_by_recursion(num, pow // 2)
 #         return result * result * num
 #
 # print(exponent_by_recursion(3, 6))
 # print(exponent_by_recursion(10, 3))
 # print(exponent_by_recursion(17, 10))
+
+# ----- #
+
