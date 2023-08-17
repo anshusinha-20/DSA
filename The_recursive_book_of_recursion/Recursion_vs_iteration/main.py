@@ -70,31 +70,31 @@
 
 # ----- #
 
-# CASE STUDY: CALCULATING EXPONENTS
-def exponent_by_iteration(num, pow):
-    prod = 1
-    for i in range(pow):
-        prod *= num
-    return prod
-
-print(exponent_by_iteration(3, 6))
-print(exponent_by_iteration(10, 3))
-print(exponent_by_iteration(17, 10))
-
-print('\n')
-
-def exponent_by_recursion(num, pow):
-    if pow == 0:
-        return 1
-    elif pow == 1:
-        return num
-    elif pow % 2 == 0:  # even power
-        result = exponent_by_iteration(num, pow // 2)
-        return result * result
-    elif pow % 2 != 0:  # odd power
-        result = exponent_by_iteration(num, pow // 2)
-        return result * result * num
-
-print(exponent_by_recursion(3, 6))
-print(exponent_by_recursion(10, 3))
-print(exponent_by_recursion(17, 10))
+# # CASE STUDY: CALCULATING EXPONENTS
+# def exponent_by_iteration(num, pow):
+#     prod = 1
+#     for i in range(pow):
+#         prod *= num
+#     return prod
+#
+# print(exponent_by_iteration(3, 6))
+# print(exponent_by_iteration(10, 3))
+# print(exponent_by_iteration(17, 10))
+#
+# print('\n')
+#
+# def exponent_by_recursion(num, pow):
+#     if pow == 0:
+#         return 1
+#     elif pow == 1:
+#         return num
+#     elif pow % 2 == 0:  # even power
+#         result = exponent_by_iteration(num, pow // 2)
+#         return result * result
+#     elif pow % 2 != 0:  # odd power
+#         result = exponent_by_iteration(num, pow // 2)
+#         return result * result * num
+#
+# print(exponent_by_recursion(3, 6))
+# print(exponent_by_recursion(10, 3))
+# print(exponent_by_recursion(17, 10))
