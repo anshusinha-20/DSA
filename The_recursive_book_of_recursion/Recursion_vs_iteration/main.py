@@ -101,3 +101,57 @@
 
 # ----- #
 
+# # PRACTICE PROJECTS
+# # 1. Iteratively calculate the sum of the integer series from 1 to n.
+# # This is similar to the factorial() function, except it performs addition
+# # instead of multiplication. For example, sumSeries(1) returns 1, sumSeries(2)
+# # returns 3 (that is, 1 + 2), sumSeries(3) returns 6 (that is, 1 + 2 + 3),
+# # and so on. This function should use a loop instead of recursion.
+# # Take a look at the factorialByIteration.py program in this chapter for guidance.
+# def sum(n):
+#     sum = 0
+#     for i in range(n + 1):
+#         sum += i
+#     return sum
+#
+# print(sum(3))
+# print(sum(10))
+
+# # 2. Write the recursive form of sumSeries(). This function should use recur- sive function
+# # calls instead of a loop. Look at the factorialByRecursion.py program in this chapter
+# # for guidance.
+# def sum(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n + sum(n - 1)
+#
+# print(sum(3))
+# print(sum(10))
+
+# # 3. Iteratively calculate the sum of the first n powers of 2 in a function named
+# # sumPowersOf2(). The powers of 2 are 2, 4, 8, 16, 32, and so on. For example,
+# # sumPowersOf2(1) returns 2, sumPowersOf2(2) returns 6 (that is, 2 + 4),
+# # sumPowersOf2(3) returns14(that is,2 + 4 + 8),and so on.
+# def sum_powers_of_2(num):
+#     sum = 0
+#     if num == 0:
+#         return 1
+#     else:
+#         for i in range(1, num + 1):
+#             sum += 2 ** i
+#         return sum
+#
+# print(sum_powers_of_2(3))
+
+# # 4. Write the recursive form of sumPowersOf2(). This function should
+# # use recursive function calls instead of a loop.
+# def sum_powers_of_2(num):
+#     if num == 0:
+#         return 1
+#     elif num == 1:
+#         return 2
+#     else:
+#         return (2 ** num) + sum_powers_of_2(num - 1)
+#
+# print(sum_powers_of_2(2))
