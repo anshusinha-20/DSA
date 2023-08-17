@@ -20,12 +20,30 @@
 
 # ----- #
 
-# THE ITERATIVE FIBONACCI ALGORITHM
-def fibonacci(nth_num):
-    a, b = 1, 1
-    for i in range(1, nth_num):
-        a, b = b, a + b
-        print(f'a = {a}, b = {b}')
-    return b
+# # THE ITERATIVE FIBONACCI ALGORITHM
+# def fibonacci(nth_num):
+#     a, b = 1, 1
+#     for i in range(1, nth_num):
+#         a, b = b, a + b
+#         print(f'a = {a}, b = {b}')
+#     return b
+#
+# print(fibonacci(10))
+
+# ----- #
+
+# THE RECURSIVE FIBONACCI ALGORITHM
+def fibonacci(nthNumber):
+    print('fibonacci(%s) called.' % (nthNumber))
+    if nthNumber == 1 or nthNumber == 2:
+        # BASE CASE
+        print('Call to fibonacci(%s) returning 1.' % (nthNumber))
+        return 1
+    else:
+        # RECURSIVE CASE
+        print('Calling fibonacci(%s) and fibonacci(%s).' % (nthNumber - 1, nthNumber - 2))
+        result = fibonacci(nthNumber - 1) + fibonacci(nthNumber - 2)
+        print('Call to fibonacci(%s) returning %s.' % (nthNumber, result))
+        return result
 
 print(fibonacci(10))
