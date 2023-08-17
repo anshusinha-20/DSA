@@ -32,18 +32,38 @@
 
 # ----- #
 
-# THE RECURSIVE FIBONACCI ALGORITHM
-def fibonacci(nthNumber):
-    print('fibonacci(%s) called.' % (nthNumber))
-    if nthNumber == 1 or nthNumber == 2:
-        # BASE CASE
-        print('Call to fibonacci(%s) returning 1.' % (nthNumber))
-        return 1
-    else:
-        # RECURSIVE CASE
-        print('Calling fibonacci(%s) and fibonacci(%s).' % (nthNumber - 1, nthNumber - 2))
-        result = fibonacci(nthNumber - 1) + fibonacci(nthNumber - 2)
-        print('Call to fibonacci(%s) returning %s.' % (nthNumber, result))
-        return result
+# # THE RECURSIVE FIBONACCI ALGORITHM
+# def fibonacci(nthNumber):
+#     print('fibonacci(%s) called.' % (nthNumber))
+#     if nthNumber == 1 or nthNumber == 2:
+#         # BASE CASE
+#         print('Call to fibonacci(%s) returning 1.' % (nthNumber))
+#         return 1
+#     else:
+#         # RECURSIVE CASE
+#         print('Calling fibonacci(%s) and fibonacci(%s).' % (nthNumber - 1, nthNumber - 2))
+#         result = fibonacci(nthNumber - 1) + fibonacci(nthNumber - 2)
+#         print('Call to fibonacci(%s) returning %s.' % (nthNumber, result))
+#         return result
+#
+# print(fibonacci(10))
 
-print(fibonacci(10))
+# ----- #
+
+# CONVERTING AN ITERATIVE ALGORITHM INTO A RECURSIVE ALGORITHM
+num = 5
+while num > 0:
+    print('Hello world!')
+    num -= 1
+
+print('\n')
+
+def greet(num):
+    print('Hello world!')
+    num -= 1
+    if num < 1:
+        return None
+    else:
+        greet(num)
+
+greet(5)
