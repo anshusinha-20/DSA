@@ -42,33 +42,36 @@
 
 # ----- #
 
-# SOLVING THE TOWER OF HANOI
-total_disks = int(input('Enter total number of disks: '))
+# # SOLVING THE TOWER OF HANOI
+# total_disks = int(input('Enter total number of disks: '))
+#
+# TOWERS = {
+#     'A': list(reversed(range(1, total_disks + 1))),
+#     'B': [],
+#     'C': []
+# }
+#
+# # print(TOWERS)
+#
+# def move_one_disk(start_tower, end_tower):
+#     disk = TOWERS[start_tower].pop()
+#     TOWERS[end_tower].append(disk)
+#
+# def solve_tower_of_hanoi(number_of_disks, start_tower, end_tower, temp_tower):
+#     if number_of_disks == 1:
+#         move_one_disk(start_tower, end_tower)
+#         print(TOWERS)
+#         return
+#     else:
+#         solve_tower_of_hanoi(number_of_disks - 1, start_tower, temp_tower, end_tower)
+#         move_one_disk(start_tower, end_tower)
+#         print(TOWERS)
+#         solve_tower_of_hanoi(number_of_disks - 1, temp_tower, end_tower, start_tower)
+#         print(TOWERS)
+#         return
+#
+#
+# solve_tower_of_hanoi(total_disks, 'A', 'C', 'B')
 
-TOWERS = {
-    'A': list(reversed(range(1, total_disks + 1))),
-    'B': [],
-    'C': []
-}
+# ----- #
 
-# print(TOWERS)
-
-def move_one_disk(start_tower, end_tower):
-    disk = TOWERS[start_tower].pop()
-    TOWERS[end_tower].append(disk)
-
-def solve_tower_of_hanoi(number_of_disks, start_tower, end_tower, temp_tower):
-    if number_of_disks == 1:
-        move_one_disk(start_tower, end_tower)
-        print(TOWERS)
-        return
-    else:
-        solve_tower_of_hanoi(number_of_disks - 1, start_tower, temp_tower, end_tower)
-        move_one_disk(start_tower, end_tower)
-        print(TOWERS)
-        solve_tower_of_hanoi(number_of_disks - 1, temp_tower, end_tower, start_tower)
-        print(TOWERS)
-        return
-
-
-solve_tower_of_hanoi(total_disks, 'A', 'C', 'B')
