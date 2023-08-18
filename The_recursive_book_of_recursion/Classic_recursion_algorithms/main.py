@@ -13,14 +13,29 @@
 
 # ----- #
 
-# REVERSING A STRING
-def rev_str(string):
+# # REVERSING A STRING
+# def rev_str(string):
+#     if len(string) == 0 or len(string) == 1:
+#         return string
+#     else:
+#         head = string[0]
+#         tail = string[1:]
+#         return rev_str(tail) + head
+#
+#
+# print(rev_str('hello'))
+
+# ----- #
+
+# DETECTING PALINDROME
+def check_palindrome(string):
     if len(string) == 0 or len(string) == 1:
-        return string
+        return True
     else:
         head = string[0]
-        tail = string[1:]
-        return rev_str(tail) + head
+        middle = string[1:-1]
+        last = string[-1]
+        return head == last and check_palindrome(middle)
 
 
-print(rev_str('hello'))
+print(check_palindrome('thisiswherepytonnotyperehwsisiht'))
