@@ -72,6 +72,3 @@
 #
 #
 # solve_tower_of_hanoi(total_disks, 'A', 'C', 'B')
-
-# ----- #
-
