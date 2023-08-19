@@ -38,3 +38,7 @@ node3['children'] = [node5, node6]
 node5['children'] = [node7, node8]
 
 print(root)
+
+# TRAVERSING A TREE
+print(root['children'][1]['data'])
+print(root['children'][1]['children'][0]['data'])
