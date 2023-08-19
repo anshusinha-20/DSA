@@ -56,14 +56,29 @@ print(root['children'][1]['children'][0]['data'])
 #
 # preorder_traverse(root)
 
-# POSTORDER TREE TRAVERSAL
-def postorder_traverse(node):
-    # recursive case
-    for child in node['children']:
-        postorder_traverse(child)
+# # POSTORDER TREE TRAVERSAL
+# def postorder_traverse(node):
+#     # recursive case
+#     for child in node['children']:
+#         postorder_traverse(child)
+#     print(node['data'], end=' ')
+#     # base case
+#     return
+#
+#
+# postorder_traverse(root)
+
+# INORDER TREE TRAVERSAL
+def inorder_traverse(node):
+    # recursive case 1
+    if len(node['children']) >= 1:
+        inorder_traverse(node['children'][0])  # traverse the left child
     print(node['data'], end=' ')
+    # recursive case 2
+    if len(node['children']) >= 2:
+        inorder_traverse(node['children'][1])  # traverse the right child
     # base case
     return
 
 
-postorder_traverse(root)
+inorder_traverse(root)
