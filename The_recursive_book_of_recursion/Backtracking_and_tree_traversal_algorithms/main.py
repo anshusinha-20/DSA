@@ -42,3 +42,16 @@ print(root)
 # TRAVERSING A TREE
 print(root['children'][1]['data'])
 print(root['children'][1]['children'][0]['data'])
+
+# PREORDER TREE TRAVERSAL
+def preorder_traverse(node):
+    print(node['data'], end=' ')
+    # recursive case
+    if len(node['children']) > 0:
+        for child in node['children']:
+            preorder_traverse(child)
+    # base case
+    return
+
+
+preorder_traverse(root)
