@@ -43,15 +43,27 @@ print(root)
 print(root['children'][1]['data'])
 print(root['children'][1]['children'][0]['data'])
 
-# PREORDER TREE TRAVERSAL
-def preorder_traverse(node):
-    print(node['data'], end=' ')
+# # PREORDER TREE TRAVERSAL
+# def preorder_traverse(node):
+#     print(node['data'], end=' ')
+#     # recursive case
+#     if len(node['children']) > 0:
+#         for child in node['children']:
+#             preorder_traverse(child)
+#     # base case
+#     return
+#
+#
+# preorder_traverse(root)
+
+# POSTORDER TREE TRAVERSAL
+def postorder_traverse(node):
     # recursive case
-    if len(node['children']) > 0:
-        for child in node['children']:
-            preorder_traverse(child)
+    for child in node['children']:
+        postorder_traverse(child)
+    print(node['data'], end=' ')
     # base case
     return
 
 
-preorder_traverse(root)
+postorder_traverse(root)
