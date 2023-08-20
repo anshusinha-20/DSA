@@ -1,41 +1,41 @@
-# # A TREE DATA STRUCTURE
-# root = {
-#     'data': 'A',
-#     'children': []
-# }
-# node2 = {
-#     'data': 'B',
-#     'children': []
-# }
-# node3 = {
-#     'data': 'C',
-#     'children': []
-# }
-# node4 = {
-#     'data': 'D',
-#     'children': []
-# }
-# node5 = {
-#     'data': 'E',
-#     'children': []
-# }
-# node6 = {
-#     'data': 'F',
-#     'children': []
-# }
-# node7 = {
-#     'data': 'G',
-#     'children': []
-# }
-# node8 = {
-#     'data': 'H',
-#     'children': []
-# }
-#
-# root['children'] = [node2, node3]
-# node2['children'] = [node4]
-# node3['children'] = [node5, node6]
-# node5['children'] = [node7, node8]
+# A TREE DATA STRUCTURE
+root = {
+    'data': 'A',
+    'children': []
+}
+node2 = {
+    'data': 'B',
+    'children': []
+}
+node3 = {
+    'data': 'C',
+    'children': []
+}
+node4 = {
+    'data': 'D',
+    'children': []
+}
+node5 = {
+    'data': 'E',
+    'children': []
+}
+node6 = {
+    'data': 'F',
+    'children': []
+}
+node7 = {
+    'data': 'G',
+    'children': []
+}
+node8 = {
+    'data': 'H',
+    'children': []
+}
+
+root['children'] = [node2, node3]
+node2['children'] = [node4]
+node3['children'] = [node5, node6]
+node5['children'] = [node7, node8]
 #
 # print(root)
 
@@ -182,3 +182,21 @@
 #
 #
 # print(f'Depth of tree is: {get_depth(root)}')
+
+# ----- #
+
+# PRACTICE PROJECTS
+# # 1. Create a reverse-inorder search, one that performs an inorder traversal
+# # but traverses the right child node before the left child node.
+#
+#
+# def inorder_traverse_right_to_left(node):
+#     if len(node['children']) >= 2:
+#         inorder_traverse_right_to_left(node['children'][1])
+#     print(node['data'], end=' ')
+#     if len(node['children']) >= 1:
+#         inorder_traverse_right_to_left(node['children'][0])
+#     return
+#
+#
+# inorder_traverse_right_to_left(root)
