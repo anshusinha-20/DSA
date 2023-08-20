@@ -1,41 +1,41 @@
-# # A TREE DATA STRUCTURE
-# root = {
-#     'data': 'A',
-#     'children': []
-# }
-# node2 = {
-#     'data': 'B',
-#     'children': []
-# }
-# node3 = {
-#     'data': 'C',
-#     'children': []
-# }
-# node4 = {
-#     'data': 'D',
-#     'children': []
-# }
-# node5 = {
-#     'data': 'E',
-#     'children': []
-# }
-# node6 = {
-#     'data': 'F',
-#     'children': []
-# }
-# node7 = {
-#     'data': 'G',
-#     'children': []
-# }
-# node8 = {
-#     'data': 'H',
-#     'children': []
-# }
+# A TREE DATA STRUCTURE
+root = {
+    'data': 'A',
+    'children': []
+}
+node2 = {
+    'data': 'B',
+    'children': []
+}
+node3 = {
+    'data': 'C',
+    'children': []
+}
+node4 = {
+    'data': 'D',
+    'children': []
+}
+node5 = {
+    'data': 'E',
+    'children': []
+}
+node6 = {
+    'data': 'F',
+    'children': []
+}
+node7 = {
+    'data': 'G',
+    'children': []
+}
+node8 = {
+    'data': 'H',
+    'children': []
+}
 
-# root['children'] = [node2, node3]
-# node2['children'] = [node4]
-# node3['children'] = [node5, node6]
-# node5['children'] = [node7, node8]
+root['children'] = [node2, node3]
+node2['children'] = [node4]
+node3['children'] = [node5, node6]
+node5['children'] = [node7, node8]
 #
 # print(root)
 
@@ -168,3 +168,17 @@
 
 # ----- #
 
+# GETTING THE MAXIMUM TREE DEPTH
+def get_depth(node):
+    if len(node['children']) == 0:
+        return 0
+    else:
+        max_depth = 0
+        for child in node['children']:
+            child_depth = get_depth(child)
+            if child_depth > max_depth:
+                max_depth = child_depth
+        return max_depth + 1
+
+
+print(f'Depth of tree is: {get_depth(root)}')
