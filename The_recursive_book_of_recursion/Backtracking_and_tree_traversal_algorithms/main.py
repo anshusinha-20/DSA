@@ -85,83 +85,86 @@
 
 # ----- #
 
-# FINDING EIGHT-LETTER NAMES IN A TREE
+# # FINDING EIGHT-LETTER NAMES IN A TREE
+#
+# root = {
+#     'data': 'Alice',
+#     'children': []
+# }
+# nodeB = {
+#     'data': 'Bob',
+#     'children': []
+# }
+# nodeC = {
+#     'data': 'Caroline',
+#     'children': []
+# }
+# nodeD = {
+#     'data': 'Darya',
+#     'children': []
+# }
+# nodeE = {
+#     'data': 'Eve',
+#     'children': []
+# }
+# nodeF = {
+#     'data': 'Fred',
+#     'children': []
+# }
+# nodeG = {
+#     'data': 'Gonzalo',
+#     'children': []
+# }
+# nodeH = {
+#     'data': 'Hadassah',
+#     'children': []
+# }
+#
+# root['children'] = [nodeB, nodeC]
+# nodeB['children'] = [nodeD]
+# nodeC['children'] = [nodeE, nodeF]
+# nodeE['children'] = [nodeG, nodeH]
+#
+# print(root)
+#
+# def preorder_find_eight_letter_word(node):
+#     if len(node['data']) == 8:
+#         print(node['data'], end=' ')
+#     if len(node['children']) > 0:
+#         for child in node['children']:
+#             preorder_find_eight_letter_word(child)
+#     return
+#
+#
+# preorder_find_eight_letter_word(root)
+#
+# print('\n')
+#
+# def postorder_find_eight_letter_word(node):
+#     for child in node['children']:
+#         postorder_find_eight_letter_word(child)
+#     if len(node['data']) == 8:
+#         print(node['data'], end=' ')
+#     return
+#
+#
+# postorder_find_eight_letter_word(root)
+#
+# print('\n')
+#
+# def inorder_find_eight_letter_word(node):
+#     if len(node['children']) >= 1:
+#         inorder_find_eight_letter_word(node['children'][0])
+#     if len(node['data']) == 8:
+#         print(node['data'], end=' ')
+#     if len(node['children']) >= 2:
+#         inorder_find_eight_letter_word(node['children'][1])
+#     return
+#
+#
+# inorder_find_eight_letter_word(root)
+#
+# print('\n')
 
-root = {
-    'data': 'Alice',
-    'children': []
-}
-nodeB = {
-    'data': 'Bob',
-    'children': []
-}
-nodeC = {
-    'data': 'Caroline',
-    'children': []
-}
-nodeD = {
-    'data': 'Darya',
-    'children': []
-}
-nodeE = {
-    'data': 'Eve',
-    'children': []
-}
-nodeF = {
-    'data': 'Fred',
-    'children': []
-}
-nodeG = {
-    'data': 'Gonzalo',
-    'children': []
-}
-nodeH = {
-    'data': 'Hadassah',
-    'children': []
-}
+# ----- #
 
-root['children'] = [nodeB, nodeC]
-nodeB['children'] = [nodeD]
-nodeC['children'] = [nodeE, nodeF]
-nodeE['children'] = [nodeG, nodeH]
-
-print(root)
-
-def preorder_find_eight_letter_word(node):
-    if len(node['data']) == 8:
-        print(node['data'], end=' ')
-    if len(node['children']) > 0:
-        for child in node['children']:
-            preorder_find_eight_letter_word(child)
-    return
-
-
-preorder_find_eight_letter_word(root)
-
-print('\n')
-
-def postorder_find_eight_letter_word(node):
-    for child in node['children']:
-        postorder_find_eight_letter_word(child)
-    if len(node['data']) == 8:
-        print(node['data'], end=' ')
-    return
-
-
-postorder_find_eight_letter_word(root)
-
-print('\n')
-
-def inorder_find_eight_letter_word(node):
-    if len(node['children']) >= 1:
-        inorder_find_eight_letter_word(node['children'][0])
-    if len(node['data']) == 8:
-        print(node['data'], end=' ')
-    if len(node['children']) >= 2:
-        inorder_find_eight_letter_word(node['children'][1])
-    return
-
-
-inorder_find_eight_letter_word(root)
-
-print('\n')
