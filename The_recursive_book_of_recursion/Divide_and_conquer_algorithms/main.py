@@ -21,18 +21,18 @@
 
 # ----- #
 
-# QUICKSORT: SPLITTING AN UNSORTED PILE OF BOOKS INTO SORTED PILES
-def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-
-    pivot = arr[len(arr) // 2]
-    left = [i for i in arr if i < pivot]
-    middle = [i for i in arr if i == pivot]
-    right = [i for i in arr if i > pivot]
-
-    return quicksort(left) + middle + quicksort(right)
-
-
-array = [0, 7, 6, 3, 1, 2, 5, 4]
-print(quicksort(array))
+# # QUICKSORT: SPLITTING AN UNSORTED PILE OF BOOKS INTO SORTED PILES
+# def quicksort(arr):
+#     if len(arr) <= 1:
+#         return arr
+#
+#     pivot = arr[len(arr) // 2]
+#     left = [i for i in arr if i < pivot]
+#     middle = [i for i in arr if i == pivot]
+#     right = [i for i in arr if i > pivot]
+#
+#     return quicksort(left) + middle + quicksort(right)
+#
+#
+# array = [0, 7, 6, 3, 1, 2, 5, 4]
+# print(quicksort(array))
