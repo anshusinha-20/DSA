@@ -88,3 +88,46 @@
 # print(linear_search([], 1))
 # print(linear_search([1, 2, 2, 3, 4, 5], 1))
 # print(linear_search([2, 1, 5, 0, 0, -1, 9], 0))
+
+# ----- #
+
+# MERGE SORT (DIVIDE AND CONQUER METHOD)
+def merge_divide(arr, first_index, last_index):
+    if first_index == last_index:
+        return
+    else:
+        mid_index = (first_index + last_index) // 2
+        merge_divide(arr, first_index, mid_index)
+        merge_divide(arr, mid_index + 1, last_index)
+        merge_conquer(arr, first_index, mid_index, last_index)
+
+
+def merge_conquer(arr, first_index, mid_index, last_index):
+    left_half = arr[first_index:mid_index+1]
+    right_half = arr[mid_index+1:last_index + 1]
+    i = j = 0
+    k = first_index
+
+    while i < len(left_half) and j < len(right_half):
+        if left_half[i] <= right_half[j]:
+            arr[k] = left_half[i]
+            i += 1
+        else:
+            arr[k] = right_half[j]
+            j += 1
+        k += 1
+
+    while i < len(left_half):
+        arr[k] = left_half[i]
+        i += 1
+        k += 1
+
+    while j < len(right_half):
+        arr[k] = right_half[j]
+        j += 1
+        k += 1
+
+
+arr = [5, 2, 1, 0, 4, 3]
+merge_divide(arr, 0, len(arr) - 1)
+print(arr)
