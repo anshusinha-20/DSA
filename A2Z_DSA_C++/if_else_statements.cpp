@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
 // // WRITE A PROGRAM TO INPUT AGE AND OUTPUT IF THE USER IS AN ADULT OR NOT
 // int main() {
@@ -30,6 +30,7 @@ e. 60 to 79 - B
 f. 80 to 100 - A
 */
 #include<iostream>
+using namespace std;
 
 int main() {
     int marks;
