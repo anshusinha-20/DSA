@@ -3,6 +3,7 @@
 using namespace std;
 
 void priority_queues() { // priority queue by default is set to max i.e, while pushing the element, it keeps the element in a descending order fashion
+    // MAX PRIORITY_QUEUE OR MAX HEAP
     priority_queue<int> pq;
     pq.push(1); // {1}
     pq.push(3); // {3, 1}
@@ -14,7 +15,7 @@ void priority_queues() { // priority queue by default is set to max i.e, while p
     pq.pop(); // 5
     cout << pq.top() << endl; // 3 
 
-    // MIN PRIORITY_QUEUE
+    // MIN PRIORITY_QUEUE OR MIN HEAP
     priority_queue<int, vector<int>, greater<int>> mpq; // element are arranged in an ascending order fashion
     mpq.push(1); // {1}
     mpq.push(3); // {1, 3}
