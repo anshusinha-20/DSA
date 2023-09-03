@@ -4,14 +4,14 @@ using namespace std;
 
 void queues() { // queues work on the FIFO principle i.e, the element which was pushed first is the element which is popped out first
     queue<int> q;
-    q.push(1);
-    q.push(2);
-    q.push(3);
-    q.push(4);
-    q.push(5);
+    q.push(1); // {1}
+    q.push(2); // {1, 2}
+    q.push(3); // {1, 2, 3}
+    q.push(4); // {1, 2, 3, 4}
+    q.push(5); // {1, 2, 3, 4, 5}
 
-    cout << q.front() << endl;
-    cout << q.back() << endl;
+    cout << q.front() << endl; // 1
+    cout << q.back() << endl; // 5
 }
 
 int main() {

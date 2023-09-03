@@ -4,11 +4,11 @@ using namespace std;
 
 void stacks() { // stacks work on LIFO principle i.e, the element was pushed the last is the element which will be popped out first
     stack<int> st;
-    st.push(1); 
-    st.push(2);
-    st.push(3);
-    st.push(4);
-    st.emplace(5);
+    st.push(1); // {1}
+    st.push(2); // {2, 1}
+    st.push(3); // {3, 2, 1}
+    st.push(4); // {4, 3, 2, 1}
+    st.emplace(5); // {5, 4, 3, 2, 1}
 
     cout << st.top() << endl; // prints the last/top element 
     st.pop(); // last/top element is popped out
