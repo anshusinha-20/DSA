@@ -11,6 +11,8 @@ void lists() {
         cout << i << " "; // 3 2
     }
     cout << endl;
+
+    // rest functions are similar to vectors
 }
 
 int main() {
