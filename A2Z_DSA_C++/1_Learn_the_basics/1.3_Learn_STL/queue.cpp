@@ -12,6 +12,8 @@ void queues() { // queues work on the FIFO principle i.e, the element which was 
 
     cout << q.front() << endl; // 1
     cout << q.back() << endl; // 5
+    q.pop(); // 1
+    cout << q.front() << endl; // 2
 }
 
 int main() {

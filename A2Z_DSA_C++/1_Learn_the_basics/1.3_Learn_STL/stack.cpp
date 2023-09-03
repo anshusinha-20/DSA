@@ -11,7 +11,7 @@ void stacks() { // stacks work on LIFO principle i.e, the element was pushed the
     st.emplace(5); // {5, 4, 3, 2, 1}
 
     cout << st.top() << endl; // prints the last/top element 
-    st.pop(); // last/top element is popped out
+    st.pop(); // last/top element is popped out i.e, 5
     cout << st.top() << endl;
 
     cout << st.size() << endl; // prints the size of the stack
