@@ -32,5 +32,23 @@ bool isPrime(int n)
 	return 1;
 }
 
-// 
-
+// BEST APPRROACH
+#include<cmath>
+bool isPrime(int n)
+{
+	// Write your code here.
+	int count = 0;
+	
+	for (int i = 1; i <= sqrt(n); i += 1) {
+		if (n % i == 0) {
+			count += 1;
+			if (n/i != i) {
+				count += 1;
+			}
+		}
+	}
+	if (count == 2) {
+		return 1;
+	}
+	return 0;
+}
