@@ -32,7 +32,7 @@ bool isPrime(int n)
 	return 1;
 }
 
-// BEST APPRROACH
+// BEST APPRROACH - SQUARE ROOT METHOD
 #include<cmath>
 bool isPrime(int n)
 {
