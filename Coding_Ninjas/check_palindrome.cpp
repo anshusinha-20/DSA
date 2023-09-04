@@ -25,3 +25,19 @@ bool isPalindrome(string& str) {
     }
     return false;
 }
+
+// ITERATIVE APPROACH
+bool isPalindrome(string& str) {
+    // Write your code here.
+    int n = str.length();
+    int l = 0;
+    int r = n - 1;
+    while (l <= r) {
+        if (str[l] != str[r]) {
+            return false;
+        }
+        l += 1;
+        r -= 1;
+    }
+    return true;
+}
