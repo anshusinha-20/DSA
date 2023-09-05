@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<map>
 using namespace std;
 
 // // BRUTE FORCE APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER IN A VECTOR - Big theta (n)
@@ -56,29 +57,63 @@ using namespace std;
 //     return 0;
 // }
 
-// HAShING APPROACH TO FIND THE NUMBER OF OCCURENCES OF A STRING
+// // HASHING APPROACH TO FIND THE NUMBER OF OCCURENCES OF A STRING
+// int main() {
+//     string s;
+//     cout << "Enter a string: ";
+//     cin >> s;
+
+//     // precomputation
+//     int hashh[256] = {0};
+//     for (int i = 0; i < s.size(); i += 1) {
+//         hashh[s[i]] += 1; // the string is autocasted to its ascii integer 
+//     }
+
+//     // fetching
+//     int num_char;
+//     cout << "Enter number of characters to search for: ";
+//     cin >> num_char;
+
+//     for (int i = 0; i < num_char; i += 1) {
+//         char ch;
+//         cout << "Enter a character: ";
+//         cin >> ch;
+//         cout << hashh[ch] << endl; // suppose the character is a, so a = 97, and hassh[97] = 1, if the string was anshu, a occured one time, i.e, 97th index had value 1
+//     }
+
+//     return 0;
+// }
+
+// MAP APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER
+
 int main() {
-    string s;
-    cout << "Enter a string: ";
-    cin >> s;
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Enter array elements: ";
+    for (int i = 0; i < n; i += 1) {
+        cin >> arr[i];
+    }
 
     // precomputation
-    int hashh[256] = {0};
-    for (int i = 0; i < s.size(); i += 1) {
-        hashh[s[i]] += 1; // the string is autocasted to its ascii integer 
+    map<int, int> mp;
+    for (int i = 0; i < n; i += 1) {
+        mp[arr[i]] += 1;
     }
 
-    // fetching
-    int num_char;
-    cout << "Enter number of characters to search for: ";
-    cin >> num_char;
+    // feteching
+    int num_el;
+    cout << "Enter number of elements to search for: ";
+    cin >> num_el;
 
-    for (int i = 0; i < num_char; i += 1) {
-        char ch;
-        cout << "Enter a character: ";
-        cin >> ch;
-        cout << hashh[ch] << endl; // suppose the character is a, so a = 97, and hassh[97] = 1, if the string was anshu, a occured one time, i.e, 97th index had value 1
-    }
+    for (int i = 0; i < num_el; i += 1) {
+        int el;
+        cout << "Enter a number: ";
+        cin >> el;
+        cout << mp[el] << endl;
+    } 
 
     return 0;
 }
