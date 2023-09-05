@@ -22,6 +22,7 @@ using namespace std;
 // }
 
 // HASING APPROACH
+int hashh[10000000]; // can take 10^7 values, and everything is initialized as zero
 int main() {
     int arr_size; // size of the array
     cout << "Enter size of the array: ";
@@ -35,9 +36,9 @@ int main() {
     }
 
     // precomputation
-    int hash[11] = {0};
+    // int hashh[1000000] = {0}; // hash[10000000] will be segmentation fault, i.e, 10^7, max limit 10^6
     for (int i = 0; i < arr_size; i += 1) {
-        hash[arr[i]] += 1; // loop through the array elements and increment the value of hash elements, i.e, if arr[0] = 1, arr[1] = 1, than hash[1] += 1, hash[1] += 1, so 1 exited two times, was stored in the hash array
+        hashh[arr[i]] += 1; // loop through the array elements and increment the value of hash elements, i.e, if arr[0] = 1, arr[1] = 1, than hash[1] += 1, hash[1] += 1, so 1 exited two times, was stored in the hash array
     }
 
     // fetching 
@@ -49,7 +50,7 @@ int main() {
         int el;
         cout << "Enter the element: ";
         cin >> el;
-        cout << hash[el] << endl;
+        cout << hashh[el] << endl;
     }
 
     return 0;
