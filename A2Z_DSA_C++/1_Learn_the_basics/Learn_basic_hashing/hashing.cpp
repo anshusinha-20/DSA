@@ -22,7 +22,7 @@ using namespace std;
 //     return 0;
 // }
 
-// // HAShING APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER
+// // HASHING APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER
 // int hashh[10000000]; // can take 10^7 values, and everything is initialized as zero
 // int main() {
 //     int arr_size; // size of the array
@@ -84,7 +84,7 @@ using namespace std;
 //     return 0;
 // }
 
-// MAP APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER
+// MAP APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER - Big theta(log n)
 
 int main() {
     int n;
