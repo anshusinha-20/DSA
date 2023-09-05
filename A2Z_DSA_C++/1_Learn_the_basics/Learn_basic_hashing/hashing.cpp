@@ -56,7 +56,7 @@ using namespace std;
 //     return 0;
 // }
 
-// HAShING APPROACH TO FIND THE NUMBER OF OCCURENCES OF AN INTEGER
+// HAShING APPROACH TO FIND THE NUMBER OF OCCURENCES OF A STRING
 int main() {
     string s;
     cout << "Enter a string: ";
@@ -69,6 +69,16 @@ int main() {
     }
 
     // fetching
-    int n;
-    cout << "Enter number of characters to search for: "
+    int num_char;
+    cout << "Enter number of characters to search for: ";
+    cin >> num_char;
+
+    for (int i = 0; i < num_char; i += 1) {
+        char ch;
+        cout << "Enter a character: ";
+        cin >> ch;
+        cout << hashh[ch] << endl;
+    }
+
+    return 0;
 }
