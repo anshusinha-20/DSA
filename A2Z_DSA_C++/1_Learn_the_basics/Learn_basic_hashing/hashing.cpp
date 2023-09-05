@@ -65,7 +65,7 @@ int main() {
     // precomputation
     int hashh[256] = {0};
     for (int i = 0; i < s.size(); i += 1) {
-        hashh[s[i]] += 1; 
+        hashh[s[i]] += 1; // the string is autocasted to its ascii integer 
     }
 
     // fetching
@@ -77,7 +77,7 @@ int main() {
         char ch;
         cout << "Enter a character: ";
         cin >> ch;
-        cout << hashh[ch] << endl;
+        cout << hashh[ch] << endl; // suppose the character is a, so a = 97, and hassh[97] = 1, if the string was anshu, a occured one time, i.e, 97th index had value 1
     }
 
     return 0;
