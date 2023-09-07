@@ -1,3 +1,4 @@
+// ITERATIVE APROACH
 void bubbleSort(vector<int> &arr, int n) 
 {
     //write your code here
@@ -16,3 +17,5 @@ void bubbleSort(vector<int> &arr, int n)
         }
     }
 }
+
+// RECURSIVE APPROACH
