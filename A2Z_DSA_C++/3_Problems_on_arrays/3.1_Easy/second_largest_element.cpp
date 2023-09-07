@@ -44,7 +44,7 @@ int main() {
     quickSort(arr, 0, n-1);
 
     for (int i = n - 2; i >= 0; i -= 1) {
-        if (arr[i] < arr[n-1]) {
+        if (arr[i] != arr[n-1]) {
             cout << arr[i] << endl;
             break;
         }
