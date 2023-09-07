@@ -7,7 +7,7 @@ int second_largest(int n, vector<int> a) {
             s_largest = largest;
             largest = a[i];
         }
-        else if (a[i] > s_largest && a[i] != largest) {
+        else if (a[i] > s_largest && a[i] != largest) { // for test cases with equal elements
             s_largest = a[i];
         }
     }
@@ -24,7 +24,7 @@ int second_smallest(int n, vector<int> a) {
             s_smallest = smallest;
             smallest = a[i];
         }
-        else if (a[i] < s_smallest && a[i] != smallest) {
+        else if (a[i] < s_smallest && a[i] != smallest) { // for test cases with equal elements
             s_smallest = a[i];
         }
     }
