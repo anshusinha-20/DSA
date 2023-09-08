@@ -35,7 +35,7 @@ using namespace std;
 //     return 0;
 // }
 
-// OPTIMAL APPROACH
+// OPTIMAL APPROACH: time complexity - o(n), space complxity - o(1)
 int main() {
     int n;
     cin >> n;
