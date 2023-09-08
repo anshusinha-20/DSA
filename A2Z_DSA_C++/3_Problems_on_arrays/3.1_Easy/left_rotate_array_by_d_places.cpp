@@ -51,18 +51,27 @@ using namespace std;
 //     return 0;
 // }
 
-// OPTIMAL APPROACH
+// OPTIMAL APPROACH: time complexity - o(n), space complexity - o(1)
+// void reverse_recursive(int arr[], int l, int r) {
+//     if (l >= r) {
+//         return;
+//     }
 
-void reverse(int arr[], int l, int r) {
-    if (l >= r) {
-        return;
+//     int temp = arr[l];
+//     arr[l] = arr[r];
+//     arr[r] = temp;
+
+//     reverse_recursive(arr, l+1, r-1);
+// }
+
+void reverse_iterative(int arr[], int l, int r) {
+    while (l <= r) {
+        int temp = arr[l];
+        arr[l] = arr[r];
+        arr[r] = temp;
+        l += 1;
+        r -= 1;
     }
-
-    int temp = arr[l];
-    arr[l] = arr[r];
-    arr[r] = temp;
-
-    reverse(arr, l+1, r-1);
 }
 
 int main() {
@@ -82,11 +91,11 @@ int main() {
 
     d = d % n; // ensure d is withing the array length
 
-    reverse(arr, 0, d-1); // left reverse
-    reverse(arr, d, n-1); // right reverse
-    reverse(arr, 0, n-1); // whole array reverse
+    reverse_iterative(arr, 0, d-1); // left reverse
+    reverse_iterative(arr, d, n-1); // right reverse
+    reverse_iterative(arr, 0, n-1); // whole array reverse
 
-    for (int i = 0; i < n; i += 1) { // left reverse
+    for (int i = 0; i < n; i += 1) { // print the final array
         cout << arr[i] << " ";
     }
     cout << endl;
