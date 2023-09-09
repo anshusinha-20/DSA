@@ -45,15 +45,15 @@ using namespace std;
 
 // OPTIMAL APPROACH: time complexity - o(n1 + n2), space complexity - o(n1 + n2)
 void union_of_two_sorted_arrays(int arr1[], int arr2[], int n1, int n2, vector<int>& u) {
-    u.emplace_back(arr1[0]);
+    u.emplace_back(arr1[0]); // emplacing the first element of the array arr1
 
-    for (int i = 1; i < n1; i++) {
+    for (int i = 1; i < n1; i++) { // emplacing all elements from arr1 starting from the index 1 which are bigger than the last element of the vector u
         if (arr1[i] > u.back()) {
             u.emplace_back(arr1[i]);
         }
     }
 
-    for (int i = 0; i < n2; i++) {
+    for (int i = 0; i < n2; i++) { // emplacing all elements from arr2 which are bigger than the last element of the vector u
         if (arr2[i] > u.back()) {
             u.emplace_back(arr2[i]);
         }
@@ -81,7 +81,7 @@ int main() {
 
     union_of_two_sorted_arrays(arr1, arr2, n1, n2, u);
 
-    for (int i = 0; i < u.size(); i++) {
+    for (int i = 0; i < u.size(); i++) { // printing the final vector u
         cout << u[i] << " ";
     }
     cout << endl;
