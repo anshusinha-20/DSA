@@ -43,7 +43,7 @@ using namespace std;
 //     return 0;
 // }
 
-// OPTIMAL APPROACH
+// OPTIMAL APPROACH: time complexity - o(n1 + n2), space complexity - o(n1 + n2)
 void union_of_two_sorted_arrays(int arr1[], int arr2[], int n1, int n2, vector<int>& u) {
     u.emplace_back(arr1[0]);
 
