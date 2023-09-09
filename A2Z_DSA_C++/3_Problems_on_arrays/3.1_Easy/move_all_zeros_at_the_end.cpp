@@ -37,45 +37,40 @@ using namespace std;
 
 // OPTIMAL APPROACH: time complexity - o(n), space complxity - o(1)
 int main() {
-    int n;
+    int n; // number of elements in the array
     cin >> n;
 
-    int arr[n];
+    int arr[n]; // filling the array with the elements
     for (int i = 0; i < n; i += 1) {
         cin >> arr[i];
     }
 
-    int j = -1;
+    int j = -1; // setting value of j to be -1
 
-    for (int i = 0; i < n; i += 1) {
+    for (int i = 0; i < n; i += 1) { // set the j value to first index value of element 0
         if (arr[i] == 0) {
             j = i;
             break;
         }
     }
 
-    if (j != 0) {
-        for (int i = 0; i < n; i += 1) {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
+    if (j == -1) { // if no zeros are found in the array return the array as it is
+        return a;
     }
 
-    else {
-        for (int i = j + 1; i < n; i += 1) {
-            if (arr[i] != 0) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                j += 1;
-            }
+    for (int i = j + 1; i < n; i++) { // if i != 0 swap the ith element with the jth element and increment j's value
+        if (arr[i] != 0) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j += 1;
         }
-        for (int i = 0; i < n; i += 1) {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
     }
 
+    for (int i = 0; i < n; i += 1) { // print the final array
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }

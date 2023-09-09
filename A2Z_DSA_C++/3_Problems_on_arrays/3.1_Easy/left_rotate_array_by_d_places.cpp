@@ -65,7 +65,7 @@ using namespace std;
 // }
 
 void reverse_iterative(int arr[], int l, int r) {
-    while (l <= r) {
+    while (l <= r) { // run the loop until the left postion is smaller than the right position
         int temp = arr[l];
         arr[l] = arr[r];
         arr[r] = temp;
@@ -75,17 +75,17 @@ void reverse_iterative(int arr[], int l, int r) {
 }
 
 int main() {
-    int n;
+    int n; // number of elements in the array
     cout << "Enter number of elements: ";
     cin >> n;
 
-    int arr[n];
+    int arr[n]; // filling the array with the elements
     cout << "Enter array elements: ";
     for (int i = 0; i < n; i += 1) {
         cin >> arr[i];
     }
 
-    int d;
+    int d; // number of places to rotate the element by
     cout << "Enter number of place to rotate the array by: ";
     cin >> d;
 
