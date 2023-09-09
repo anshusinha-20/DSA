@@ -29,7 +29,7 @@ using namespace std;
 //     return 0;
 // }
 
-// // BETTER APPROACH: time complexity - o(n), space complexity - o(n)
+// // BETTER APPROACH: time complexity - o(2n), space complexity - o(n)
 // int main() {
 //     int n;
 //     cin >> n;
@@ -55,8 +55,33 @@ using namespace std;
 //     return 0;
 // }
 
-// OPTIMAL APPROACH 1: time complexity - o(n), space complexity - o(1)
-// BETTER APPROACH
+// // OPTIMAL APPROACH 1: time complexity - o(2n), space complexity - o(1)
+// int main() {
+//     int n;
+//     cin >> n;
+
+//     int arr[n-1];
+//     cout << "Enter " << n-1 << " inclusive numbers between 1 and " << n << ": ";
+//     for (int i = 0; i < n - 1; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int sum_whole_arr = 0;
+//     for (int i = 1; i <= n; i++) {
+//         sum_whole_arr += i;
+//     }
+
+//     int sum_partial_arr = 0;
+//     for (int i = 0; i < n-1; i++) {
+//         sum_partial_arr += arr[i];
+//     }
+
+//     cout << sum_whole_arr - sum_partial_arr << endl;
+
+//     return 0;
+// }
+
+// OPTIMAL APPROACH 2: time complexity - o(n), space complexity - o(1)
 int main() {
     int n;
     cin >> n;
@@ -67,17 +92,15 @@ int main() {
         cin >> arr[i];
     }
 
-    int sum_whole_arr = 0;
-    for (int i = 1; i <= n; i++) {
-        sum_whole_arr += i;
+    int xor1 = 0;
+    int xor2 = 0;
+    for (int i = 0; i < n - 1; i++) {
+        xor1 ^= arr[i];
+        xor2 ^= (i + 1);
     }
 
-    int sum_partial_arr = 0;
-    for (int i = 0; i < n-1; i++) {
-        sum_partial_arr += arr[i];
-    }
-
-    cout << sum_whole_arr - sum_partial_arr << endl;
+    xor2 ^= n; // xor the last element
+    cout << (xor1 ^ xor2) << endl;
 
     return 0;
 }
