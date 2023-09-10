@@ -28,27 +28,47 @@ using namespace std;
 //     return 0;
 // }
 
-// BETTER APPRAOCH - time complexity - o(n), space complexity - o(n)
+// // BETTER APPRAOCH - time complexity - o(n), space complexity - o(n)
+// int main() {
+//     int n; // number of elements in the array
+//     cin >> n;
+
+//     int arr[n]; // filling array with the elements
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     map<int, int> m; // creating a map with elements as keys and their number of occurences as values
+//     for (int i = 0; i < n; i++) {
+//         m[arr[i]] += 1;
+//     }
+
+//     for (auto i : m) {
+//         if (i.second == 1) { // if value is 1
+//             cout << i.first << endl; // print the key storing value 1
+//             break;
+//         }
+//     }
+
+//     return 0;
+// }
+
+// OPTIMAL APPROACH: time complexity - o(n), space complexity - o(1)
 int main() {
-    int n; // number of elements in the array
+    int n;
     cin >> n;
 
-    int arr[n]; // filling array with the elements
+    int arr[n];
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    map<int, int> m; // creating a map with elements as keys and their number of occurences as values
+    int xor1 = 0;
     for (int i = 0; i < n; i++) {
-        m[arr[i]] += 1;
+        xor1 ^= arr[i];
     }
 
-    for (auto i : m) {
-        if (i.second == 1) { // if value is 1
-            cout << i.first << endl; // print the key storing value 1
-            break;
-        }
-    }
+    cout << xor1 << endl;
 
     return 0;
 }
