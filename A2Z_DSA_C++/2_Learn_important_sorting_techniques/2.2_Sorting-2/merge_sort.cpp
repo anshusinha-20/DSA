@@ -40,7 +40,7 @@ void mergesort(vector<int>& arr, int l, int r) {
     merge(arr, l, mid, r);
 }
 
-void mergeSort(vector<int>& arr, int l, int r) {
+void mergeSort(vector<int>& arr, int n) {
     // Write Your Code Here
     mergesort(arr,0,arr.size()-1);
 }
