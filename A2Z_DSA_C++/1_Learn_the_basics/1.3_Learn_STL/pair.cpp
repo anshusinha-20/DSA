@@ -2,6 +2,7 @@
 #include<utility>
 using namespace std;
 
+
 void pairs() {
     pair <int, int> p1 = {1, 2};
     cout << p1.first << " " << p1.second << endl;
