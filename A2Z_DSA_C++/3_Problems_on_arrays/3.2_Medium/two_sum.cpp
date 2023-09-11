@@ -28,7 +28,7 @@ int main() {
         }
     }
 
-    if (p.first && p.second) {
+    if (p.first != -1 && p.second != -1) {
         cout << "yes" << endl;
     }
     else {
