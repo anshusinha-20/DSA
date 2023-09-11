@@ -32,7 +32,7 @@ using namespace std;
 //     return 0;
 // }
 
-// BETTER APPROACH
+// BETTER APPROACH: time complexity - o(n^2), space complexity - o(1)
 int main() {
     int n; // number of elements in the array
     cin >> n;
