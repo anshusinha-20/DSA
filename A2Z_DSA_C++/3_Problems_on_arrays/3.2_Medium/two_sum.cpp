@@ -68,7 +68,7 @@ using namespace std;
 
 // }
 
-// OPTIMAL APPROACH
+// OPTIMAL APPROACH: time complexity  - o(n), space complexity - o(1), sorting - o(nlogn)
 int partitionArray(int input[], int start, int end) {
 	// Write your code here
 	int pivot = input[start];
