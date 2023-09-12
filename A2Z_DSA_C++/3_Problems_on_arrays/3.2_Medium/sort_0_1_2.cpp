@@ -70,7 +70,7 @@ int main() {
         if (arr[i] == 0) {
             count0++;
         }
-        else if (arr[i] == 1) {
+        else if (arr[i] == 1) { // can't use 'else', because it will count '2' as well, so specifically 'else if' statement is used
             count1++;
         }
     }
