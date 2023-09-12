@@ -55,7 +55,7 @@ int main() {
     }
 
     if (j == -1) { // if no zeros are found in the array return the array as it is
-        return a;
+        return arr;
     }
 
     for (int i = j + 1; i < n; i++) { // if i != 0 swap the ith element with the jth element and increment j's value

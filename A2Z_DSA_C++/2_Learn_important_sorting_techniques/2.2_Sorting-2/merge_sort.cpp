@@ -1,3 +1,4 @@
+// Time complexity - o(nlogn), space compexity - o(1)
 void merge(vector<int>& arr, int l, int mid, int r) {
     vector<int> temp;
     int left = l;
