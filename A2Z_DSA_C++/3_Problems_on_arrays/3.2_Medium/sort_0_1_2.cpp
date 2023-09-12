@@ -53,7 +53,54 @@ using namespace std;
 //     return 0;
 // }
 
-// BETTER APPROACH (Dutch national flag): time complexity - o(n), space complexity - o(1)
+// // BETTER APPROACH (Dutch national flag): time complexity - o(n), space complexity - o(1)
+// int main() {
+//     int n;
+//     cin >> n;
+
+//     int arr[n];
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int count0 = 0;
+//     int count1 = 0;
+
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] == 0) {
+//             count0++;
+//         }
+//         else if (arr[i] == 1) { // can't use 'else', because it will count '2' as well, so specifically 'else if' statement is used
+//             count1++;
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++) {
+//         if (count0 > 0) {
+//             arr[i] = 0;
+//             count0--;
+//             continue;
+//         }
+//         else if(count1 > 0) {
+//             arr[i] = 1;
+//             count1--;
+//             continue;
+//         }
+//         else {
+//             arr[i] = 2;
+
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+// OPTIMAL APPROACH: time complexity - o(n), space complexity - o(1), Dutch nation flag variant
 int main() {
     int n;
     cin >> n;
@@ -63,32 +110,22 @@ int main() {
         cin >> arr[i];
     }
 
-    int count0 = 0;
-    int count1 = 0;
+    int low = 0;
+    int mid = 0;
+    int high = n-1;
 
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == 0) {
-            count0++;
+    while (mid <= high) {
+        if (arr[mid] == 0) {
+            swap(arr[low], arr[mid]);
+            low++;
+            mid++;
         }
-        else if (arr[i] == 1) { // can't use 'else', because it will count '2' as well, so specifically 'else if' statement is used
-            count1++;
-        }
-    }
-
-    for (int i = 0; i < n; i++) {
-        if (count0 > 0) {
-            arr[i] = 0;
-            count0--;
-            continue;
-        }
-        else if(count1 > 0) {
-            arr[i] = 1;
-            count1--;
-            continue;
+        else if (arr[mid] == 1) {
+            mid++;
         }
         else {
-            arr[i] = 2;
-
+            swap(mid, high);
+            high--;
         }
     }
 
