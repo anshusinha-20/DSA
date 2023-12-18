@@ -1,0 +1,68 @@
+1. Infix expression <operand><operator><operand>
+
+a. Precedence
+    ()
+    ^
+    *, /
+    +, -
+
+b. Rule of associativity
+    ^ from right to left
+
+i. 4 * 2 + 3
+    8 + 3
+    11
+
+ii. 4 * (2 + 3)
+    4 * 5
+    20
+
+iii. 2 ^ 3 ^ 2
+    2 ^ 9
+    512
+
+2. Prefix expression <operator><operand><operand>
+
+i. 4 * 2 +3
+    ((4 * 2) + 3)
+    (* (4 2) + 3)
+    +(* (4 2)3)
+    + * 4 2 3
+
+ii. (5 - (6 / 3))
+    (5 - / (6 3))
+    - (5 / (6 3))
+    - 5 / 6 3
+
+3. Postfix expression <operand><operand><operator>
+
+i. 4 * 2 + 3
+    ((4 * 2) + 3)
+    ((4 2) * + 3)
+    ((4 2) * 3) +
+    4 2 * 3 +
+
+ii. 5 - 6 / 3
+    (5 - (6 / 3))
+    (5 - (6 3) / )
+    (5 (6 3) / ) -
+    5 6 3 / -
+
+4. Infix to Postfix
+
+i. (a - b / c) * (a / k - l)    
+    (
+    ( a     a
+    (-b     a b
+    (-/c    a b c
+    (-/)    a b c / - 
+    *       a b c / - 
+    *(a     a b c / - a
+    *(/k    a b c / - a k
+    *(/-    a b c / - a k 
+    *(-     a b c / - a k /
+    *(-l    a b c / - a k / l
+    *(-     a b c / - a k / l
+    *(-)    a b c / - a k / l - 
+    *       a b c / - a k / l - *
+            a b c / - a k / l - * 
